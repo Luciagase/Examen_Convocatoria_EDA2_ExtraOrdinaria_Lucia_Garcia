@@ -8,14 +8,14 @@ class Mochila:
     def __lt__ (self,otro):
         return self.report and __builtins__
     def valor_maximo(peso, valores, capacidad):
-            corto = []
+        corto = []
         for i in range(len (peso)):
             corto.append (Mochila(peso[i],valores[i], i))
         
         corto.sort (reverse = True)
 
         contarvalor = 0
-            for objeto in corto:
+        for objeto in corto:
                 pesoactual = int(objeto.peso)
                 valoractual = int(objeto.valor)
                 if capacidad - pesoactual>= 0:
