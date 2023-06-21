@@ -62,3 +62,18 @@ def bfs(graph, start_planet):
                 visited_planets.add(neighbor)
                 queue.append(neighbor)
     return visited_planets
+
+#Planetas
+Tierra = Planet("Tierra")
+Knowhere = Planet("Knowhere")
+ZenWhoberi = Planet("Zen-Whoberi")
+Vormir = Planet("Vormir")
+Titan = Planet("Titan")
+Nidavellir = Planet("Nidavellir")
+planet1 = Planet("planet1")
+planet2 = Planet("planet2")
+planet3 = Planet("planet3")
+planet4 = Planet("planet4")
+planet5 = Planet("planet5")
+planet6 = Planet("planet6")
+planet7 = Planet("planet7")
