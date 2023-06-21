@@ -394,3 +394,8 @@ print("\nCamino más corto desde Knowhere hasta Titan:")
 for planet in path:
     print(planet.name)
 
+#Determinar todos los planetas a los que se puede llegar desde Titan
+reachable_planets = bfs(graph, Titan)
+print("\nPlanetas a los que se puede llegar desde Titan:")
+for planet in reachable_planets:
+    print(planet.name)
