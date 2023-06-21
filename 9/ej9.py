@@ -145,3 +145,6 @@ planet7.add_neighbor(planet6, 25)
 planet7.add_neighbor(planet4, 30)
 planet7.add_neighbor(planet2, 20)
 
+#grafo
+graph = [Tierra, Knowhere, ZenWhoberi, Vormir, Titan, Nidavellir, planet1, planet2, planet3, planet4, planet5, planet6, planet7]
+
