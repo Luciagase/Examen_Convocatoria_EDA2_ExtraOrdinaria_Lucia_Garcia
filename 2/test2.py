@@ -1,5 +1,5 @@
 import pytest
-from ej2 import Armadura
+from armaduras import Armadura
 
 def test_calificacion_armaduras():
     # Crear una lista con objetos Armadura
