@@ -1,9 +1,16 @@
+class Nodo(object):
+    def __init__(self, data):
+        self.data = data
+        self.next = None
+
 class Armadura:
     def __init__(self, nombre, rango):
         self.nombre = nombre
         self.rango = rango
-        print("Armadura creada con éxito")
-
+        
+    def __str__(self):
+        return f'Pokemon: {self.nombre}, Rango: {self.rango}'
+    
     def calificacion(self):
         codigo_legion = self.nombre[:3]
         identificacion_coherente = len(self.nombre) % 2 == 0
@@ -17,6 +24,27 @@ class Armadura:
         print("Identificación de siglo:", identificacion_siglo)
         print("Número de armadura:", numero_armadura)
         print("Número de escuadra:", numero_escuadra)
+
+class Lista:
+    def __init__(self):
+        self.head = None
     
-    def __str__(self):
-        return f"Armadura: {self.nombre} - Rango: {self.rango}"
+    def insertar(self, armadura):
+        new_node = Nodo(armadura)
+        if self.head is None:
+            self.head = new_node
+        elif self.head.data.rango < armadura.rango:
+            new_node.next = self.head
+            self.head = new_node
+        else:
+            current = self.head
+            while current.next is not None and current.next.data.rango > armadura.rango:
+                current = current.next
+            new_node.next = current.next
+            current.next = new_node
+
+    def mostrar(self):
+        current = self.head
+        while current is not None:
+            print(current.data)
+            current = current.next

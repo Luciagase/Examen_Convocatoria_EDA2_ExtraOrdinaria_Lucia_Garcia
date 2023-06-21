@@ -4,7 +4,7 @@ class Nodo(object):
         self.data = data
         self.next = None
 
-class Pokemon:
+class Armadura:
     def __init__(self, nombre, rango):
         self.nombre = nombre
         self.rango = rango
@@ -54,4 +54,3 @@ class Lista:
             print(current.data)
             current = current.next
 
-            
